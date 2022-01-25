@@ -23,9 +23,9 @@ import {ClassScheduleSchema, ClassSchema} from '../schemas/ClassScheduleSchema';
 
 import {isNetworkAvailable} from '../utils';
 
-export const isLoggedIn = realmApp => {
+export const isLoggedIn = (realmApp) => {
   return realmApp && realmApp.currentUser && realmApp.currentUser.isLoggedIn;
-};
+}
 
 export const getRealmApp = () => {
   const appId = 'skoolrealmdb-lvuzo';
@@ -34,7 +34,7 @@ export const getRealmApp = () => {
     timeout: 10000,
     app: {
       name: 'default',
-      version: 1,
+      version: '1',
     },
   };
   return new Realm.App(appConfig);
